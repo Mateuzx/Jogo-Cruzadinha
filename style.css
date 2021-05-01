@@ -292,5 +292,78 @@ body{
     -webkit-text-stroke-color: #39006f;
 }
 
+.tituloInfo_header{
+    margin-top: 1%;
+}
+
+.conteudo_info{
+    background-color: white;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px;
+    width: 800px;
+    height: 320px;  
+    border: rgba(255, 0, 0, 0.904) 5px solid; 
+    border-radius: 15px;
+    font-size: 25px;    
+    color: #56049f;
+    text-align: center;
+}
+
+.conteudo_info img {
+    margin: auto;
+}
+
+.conteudo_info p {
+    text-align: justify;
+    margin: auto;
+}
+
+.conteudo_info .estilo_texto_comecar{
+    margin-left: 12%;
+    margin-top: 2%;
+}
+
+.header_index{
+    margin-top: 0.6%;
+    text-align: center;
+}
+
+.btn_iniciar{
+    margin: auto;
+    text-align: center;
+}
+
+.btn_style {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: solid rgba(255, 255, 255, 0) 0;
+    color: rgba(255, 255, 255, 0.96);
+    font-family: roboto,Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 40px;
+    background-color: #c51f62;
+    -webkit-box-shadow: 8px 9px 0 0 #22096F;
+    -moz-box-shadow: 8px 9px 0 0 #22096F;
+    box-shadow: 8px 9px 0 0 #22096F;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    
+ }
+ 
+ .btn_style:hover {
+    background: #ff0066;
+    border: solid rgba(255, 255, 255, 0) 0;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 30px;
+    text-decoration: none;
+ }
+
 
 
