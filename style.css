@@ -108,6 +108,7 @@ body{
 .Registradores{
     margin-left: 28.0%;
     margin-top: -34.46%;
+    
 }
 
 .Registradores p{
@@ -148,12 +149,138 @@ body{
 }
 
 .quad_core{
-    margin-left: 22.8%;
-    margin-top: 3.4%;
+    margin-left: 53.0%;
+    margin-top: -27.8%;
+    position: absolute;
     
 }
 
 .quad_core p{
+    border: #39006f 4px solid;
+    
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.quad_core .letra_d_quad{
+    visibility: hidden;
+    border: none;
+}
+
+.CS{
+    margin-left: 1.7%;
+    margin-top: -27.7%;
+    position: absolute;
+    
+}
+
+.CS p{
+    border: #39006f 4px solid;
+    
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.i7{
+    margin-left: 31.5%;
+    margin-top: -16.0%;
+    position: absolute;
+    
+}
+
+.i7 p{
+    border: #39006f 4px solid;
+    
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.RAM{
+    margin-left: 61.5%;
+    margin-top: -16%;
+    position: absolute;
+    
+}
+
+.RAM p{
+    border: #39006f 4px solid;
+    
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.ROM{
+    margin-left: 44.3%;
+    margin-top: -16%;
+    position: absolute;
+    
+}
+
+.ROM p{
+    border: #39006f 4px solid;
+    
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.DMA{
+    margin-left: 6.3%;
+    margin-top: -21.7%;
+    position: absolute;
+    
+}
+
+.DMA p{
+    border: #39006f 4px solid;
+    
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.Eprom{
+    margin-left: 56.9%;
+    margin-top: -3.5%;
+    position: absolute;
+}
+
+.Eprom p{
+    float: left;
     border: #39006f 4px solid;
     width: 50px;
     font-size: 30px;
@@ -165,9 +292,5 @@ body{
     -webkit-text-stroke-color: #39006f;
 }
 
-.quad_core .letra_u_dualCore{
-    color: white;
-    -webkit-text-stroke-color: white;
-    border: none;
-}
+
 
