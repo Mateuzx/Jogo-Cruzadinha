@@ -137,13 +137,10 @@
     </div>
 
     <div class="div_perguntas">
-        <p id="tx_pergunta"> <span class="destaque">1</span>- Qual o componente principal de um computador?:
-            <input type="text" placeholder="Digite sua resposta" id="in_resposta">
-            
-                <button class="btn_style_input" onclick="verificacao_pergunta()">Confirmar</button>
-            
+        <p id="tx_pergunta"> <span class="destaque">1</span>- Qual o componente principal de um computador?</p>
+        <input type="text" placeholder="Digite sua resposta" id="in_resposta">
+        <button class="btn_style_input" onclick="verificacao_pergunta()">Confirmar</button>
 
-        </p>
     </div>
 
 </body>
@@ -151,28 +148,33 @@
 </html>
 
 <script>
-
-
     function verificacao_pergunta() {
         var resposta = in_resposta.value;
         var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
-        
+
 
         if (resposta == 'CPU' || resposta == 'cpu') {
+            /* Se o usuario acertar a questão, setar as letras na cruzadinha, 
+                                                                   realizar a estilização e chamar a proxima pergunta*/
             letra_c_cpu.innerHTML = `C¹`;
             letra_p_cpu.innerHTML = `P`;
             letra_u_cpu.innerHTML = `U¹³`;
 
             letra_p_cpu.style = estiloPalavra;
 
-            tx_pergunta.innerHTML = ``
+            tx_pergunta.innerHTML =
+                `<span class="destaque">2</span>- Como é chamado uma linha de controle para circuitos?`
+            document.getElementById("in_resposta").value = "";
+            /*Linha para apagar a resposta da primeira questão, 
+                                                                           para deixar o input para a proxima pergunta*/
 
-        }else if(resposta != 'CPU' || 'cpu'){
-                alert('Resposta incorreta!');
+            verificacao_pergunta_2(); /* Chamando a proxima pergunta SOMENTE, caso a resposta da atual esteja correta.
+                                         Evitando que respostas fora de ordem sejam acionadas*/
+        } else {
+            alert('Resposta incorreta');
         }
 
 
- 
 
         /* <div class="CPU">
             <p id="letra_c_cpu" style="color: #f10160; -webkit-text-stroke-color: #39006f;">1</p>
@@ -181,6 +183,32 @@
         </div> */
     }
 
+    function verificacao_pergunta_2() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+
+        if (resposta != "" || resposta != "") {
+            /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                           alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                           sem a necessidade*/
+
+            if ((resposta == 'CS' && check_resposta_1 == 1) || (resposta == 'cs' && check_resposta_1 == 1)) {
+                letra_c_cpu.innerHTML = `C¹`;
+                letra_s_cs.innerHTML = `S`;
+
+                letra_s_cs.style = estiloPalavra;
+
+                tx_pergunta.innerHTML = `<span class="destaque">3</span>- Pergunta Número 3?`
+                document.getElementById("in_resposta").value = "";
+                check_resposta_2++;
+            } else {
+                alert('Resposta incorreta');
+            }
+
+        }
 
 
+
+
+    }
 </script>
