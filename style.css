@@ -9,7 +9,7 @@ body{
     margin-top: 4%;
     margin-bottom: 5%;
     width: 1100px;
-    height: 400px;  
+    height: 580px;  
     border: rgba(255, 0, 0, 0.904) 5px solid; 
     border-radius: 15px;
 }
@@ -29,7 +29,7 @@ body{
 .CPU p{
     
     float: left;
-    border: #39006f 5px solid;
+    border: #39006f 4px solid;
     width: 50px;
     font-size: 30px;
     text-align: center;
@@ -40,5 +40,134 @@ body{
     -webkit-text-stroke-color: #39006f;
 }
 
+.ULA{
+    margin-left: 12.5%;
+    margin-top: 5.80%;
+}
 
+.ULA p{
+    border: #39006f 4px solid;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.ULA .ula_letra_l {
+    border-top: #39006f 2px solid;
+    border-bottom: #39006f 2px solid;
+    
+}
+
+.data_bus{
+    margin-left: 7.7%;
+    margin-top: -3.8%;
+}
+
+.data_bus p{
+    float: left;
+    border: #39006f 4px solid;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.data_bus .letra_a2{
+    color: white;
+    -webkit-text-stroke-color: white;
+    border: none;
+}
+
+.adress_buss{
+    margin-left: 22.8%;
+    margin-top: 3.4%;
+    
+}
+
+.adress_buss p{
+    border: #39006f 4px solid;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.Registradores{
+    margin-left: 28.0%;
+    margin-top: -34.46%;
+}
+
+.Registradores p{
+    float: left;
+    border: #39006f 4px solid;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.dual_core{
+    margin-left: 17.9%;
+    margin-top: 23.0%;
+}
+
+.dual_core p{
+    float: left;
+    border: #39006f 4px solid;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.dual_core .letra_u_dualCore{
+    color: white;
+    -webkit-text-stroke-color: white;
+    border: none;
+}
+
+.quad_core{
+    margin-left: 22.8%;
+    margin-top: 3.4%;
+    
+}
+
+.quad_core p{
+    border: #39006f 4px solid;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+.quad_core .letra_u_dualCore{
+    color: white;
+    -webkit-text-stroke-color: white;
+    border: none;
+}
 
