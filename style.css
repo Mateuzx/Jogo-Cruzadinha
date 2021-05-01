@@ -1,0 +1,44 @@
+body{
+    background-image: linear-gradient(to right, #570C9E,#ae0fda,#570C9E);
+    font-family: Roboto,Arial, Helvetica, sans-serif;
+}
+
+.conteudo{
+    background-color: white;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    width: 1100px;
+    height: 400px;  
+    border: rgba(255, 0, 0, 0.904) 5px solid; 
+    border-radius: 15px;
+}
+
+.header{
+    margin-top: 2%;
+    text-align: center;
+}
+
+/*Criação das linhas da cruzadinha*/
+
+.CPU{
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.CPU p{
+    
+    float: left;
+    border: #39006f 5px solid;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: #f10160;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #39006f;
+}
+
+
+
