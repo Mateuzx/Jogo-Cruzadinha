@@ -80,7 +80,7 @@
             <p class="letra_u_dualCore" id="letra_u_dualcore"> </p>
             <p id="letra_a_dualcore"> </p>
             <p id="letra_l_dualcore"> </p>
-            <p>_</p>
+            <p id="letra___dualcore">_</p>
             <p id="letra_c_dualcore"> </p>
             <p id="letra_o_dualcore"> </p>
             <p id="letra_r_dualcore"> </p>
@@ -137,7 +137,8 @@
     </div>
 
     <div class="div_perguntas">
-        <p id="tx_pergunta"> <span class="destaque">1</span>- Qual o componente principal de um computador?</p>
+        <p id="tx_pergunta"> <span class="destaque" id="span_pergunta">1</span>- Qual o componente principal de um
+            computador?</p>
         <input type="text" placeholder="Digite sua resposta" id="in_resposta">
         <button class="btn_style_input" onclick="verificacao_pergunta()">Confirmar</button>
 
@@ -148,67 +149,125 @@
 </html>
 
 <script>
+    
+
     function verificacao_pergunta() {
         var resposta = in_resposta.value;
         var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML; // Descobrir em qual pergunta estamos (Se é questão 1,2,3,4...)
+
+        if (pergunta == 1) {
+            /*Sempre quando clicamos no botão, ele chama a função que seria responsavel para o 
+                                         acionamento da questão 1, porém se estivermos na questão 2 e clicarmos no botão, 
+                                         desejamos que seja selecionada a função da questão atual, e não somente a primeira, 
+                                         logo, esse if verifica qual questão estamos*/
+            if (resposta == 'CPU' || resposta == 'cpu') {
+                /* Se o usuario acertar a questão, setar as letras na cruzadinha, 
+                                                                       realizar a estilização e chamar a proxima pergunta*/
+                letra_c_cpu.innerHTML = `C¹`;
+                letra_p_cpu.innerHTML = `P`;
+                letra_u_cpu.innerHTML = `U¹³`;
+
+                letra_p_cpu.style = estiloPalavra; // Setagem de cores, para a ativação das palavras (no css ta tudo white)
+
+                tx_pergunta.innerHTML =
+                    `<span class="destaque" id="span_pergunta">2</span>- Como é chamado uma linha de controle para circuitos?`
+                document.getElementById("in_resposta").value = "";
+                /*Linha para apagar a resposta da primeira questão, 
+                                                                               para deixar o input para a proxima pergunta*/
+
+                verificacao_pergunta_2();
+                /* Chamando a proxima pergunta SOMENTE, caso a resposta da atual esteja correta.
+                                                        Evitando que respostas fora de ordem sejam acionadas*/
 
 
-        if (resposta == 'CPU' || resposta == 'cpu') {
-            /* Se o usuario acertar a questão, setar as letras na cruzadinha, 
-                                                                   realizar a estilização e chamar a proxima pergunta*/
-            letra_c_cpu.innerHTML = `C¹`;
-            letra_p_cpu.innerHTML = `P`;
-            letra_u_cpu.innerHTML = `U¹³`;
-
-            letra_p_cpu.style = estiloPalavra;
-
-            tx_pergunta.innerHTML =
-                `<span class="destaque">2</span>- Como é chamado uma linha de controle para circuitos?`
-            document.getElementById("in_resposta").value = "";
-            /*Linha para apagar a resposta da primeira questão, 
-                                                                           para deixar o input para a proxima pergunta*/
-
-            verificacao_pergunta_2(); /* Chamando a proxima pergunta SOMENTE, caso a resposta da atual esteja correta.
-                                         Evitando que respostas fora de ordem sejam acionadas*/
-        } else {
-            alert('Resposta incorreta');
+            } else {
+                alert('Resposta incorreta');
+            }
+        } else if (pergunta != 1) { // Caso não for a primeira questão, pode chamar a segunda, e assim sucessivamente
+            verificacao_pergunta_2();
         }
 
-
-
-        /* <div class="CPU">
-            <p id="letra_c_cpu" style="color: #f10160; -webkit-text-stroke-color: #39006f;">1</p>
-            <p id="letra_p_cpu"></p>
-            <p id="letra_u_cpu" style="color: #f10160; -webkit-text-stroke-color: #39006f;">13</p>
-        </div> */
     }
 
     function verificacao_pergunta_2() {
         var resposta = in_resposta.value;
         var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML; 
 
-        if (resposta != "" || resposta != "") {
-            /*Parametro para garantir a execução somente caso o usuario escreva 
-                                                           alguma resposta na pergunta, evitando o bug de acionamento de função 
-                                                           sem a necessidade*/
+        if (pergunta == 2) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
 
-            if ((resposta == 'CS' && check_resposta_1 == 1) || (resposta == 'cs' && check_resposta_1 == 1)) {
-                letra_c_cpu.innerHTML = `C¹`;
-                letra_s_cs.innerHTML = `S`;
+                if ((resposta == 'CS') || (resposta == 'cs')) {
+                    letra_c_cpu.innerHTML = `C¹`;
+                    letra_s_cs.innerHTML = `S`;
 
-                letra_s_cs.style = estiloPalavra;
+                    letra_s_cs.style = estiloPalavra;
 
-                tx_pergunta.innerHTML = `<span class="destaque">3</span>- Pergunta Número 3?`
-                document.getElementById("in_resposta").value = "";
-                check_resposta_2++;
-            } else {
-                alert('Resposta incorreta');
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">3</span>- Qual o nome dado a um processados com 2 núcleos?`
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_3();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+
             }
-
+        } else if (pergunta != 2) {
+            verificacao_pergunta_3();
         }
+    }
+
+    function verificacao_pergunta_3() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 3) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if ((resposta == 'Dual core') || (resposta == 'dual core' || resposta == 'Dual Core')) {
+                    letra_d_dualcore.innerHTML = `D³`;
+                    letra_u_ab.innerHTML = `U`;
+                    letra_a_dualcore.innerHTML = `A`;
+                    letra_l_dualcore.innerHTML = `L`;
+                    letra_c_dualcore.innerHTML = `C`;
+                    letra___dualcore.innerHTML = `_`;
+                    letra_o_dualcore.innerHTML = `O`;
+                    letra_r_dualcore.innerHTML = `R`;
+                    letra_e_dualcore.innerHTML = `E`;
+
+                    letra_d_dualcore.style = estiloPalavra; 
+                    letra_u_ab.style = estiloPalavra;
+                    letra_a_dualcore.style = estiloPalavra;
+                    letra_l_dualcore.style = estiloPalavra;
+                    letra___dualcore.style = estiloPalavra;
+                    letra_c_dualcore.style = estiloPalavra;
+                    letra_o_dualcore.style = estiloPalavra;
+                    letra_r_dualcore.style = estiloPalavra;
+                    letra_e_dualcore.style = estiloPalavra;
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">4</span>- Qual configuração para transferir dados entre dispositivos via hardware? `
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_4();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
 
 
 
-
+            }
+        } else if (pergunta != 3) {
+            verificacao_pergunta_4();
+        }
     }
 </script>
