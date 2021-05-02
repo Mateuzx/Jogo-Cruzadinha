@@ -57,7 +57,7 @@ body{
     -webkit-text-stroke-color: white;
 }
 
-.ULA .ula_letra_l {
+.ULA .ula_letraa_l {
     border-top: #39006f 2px solid;
     border-bottom: #39006f 2px solid;
     
@@ -276,6 +276,7 @@ body{
     color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
+    
 }
 
 .Eprom{

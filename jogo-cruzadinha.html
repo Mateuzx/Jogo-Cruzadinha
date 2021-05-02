@@ -26,7 +26,7 @@
         </div>
 
         <div class="ULA">
-            <p class="ula_letra_l" id="letra_l_ula"> </p>
+            <p class="ula_letraa_l" id="letra_l_ula"> </p>
             <p id="letra_a_ula"> </p>
         </div>
 
@@ -35,7 +35,7 @@
             <p class="letra_a2" id="letra_a_db"> </p>
             <p id="letra_t_db"> </p>
             <p id="letra_a2_db" style="color: #f10160; -webkit-text-stroke-color: #39006f;">4</p>
-            <p>_</p>
+            <p id="letra___db">_</p>
             <p id="letra_b_db"> </p>
             <p id="letra_u_db"> </p>
             <p id="letra_s_db"> </p>
@@ -54,7 +54,7 @@
             <p id="letra_b_ab"> </p>
             <p id="letra_u_ab"> </p>
             <p id="letra_s3_ab"> </p>
-            <p id="letra_s4_ab"> </p>
+            <p id="letra_s4_ab" style="color: white; border: white solid 4px"> </p>
         </div>
 
 
@@ -108,8 +108,8 @@
         </div>
 
         <div class="DMA">
-            <P id="letra_m_dma"> </P>
-            <P id="letra_a_dma"> </P>
+            <p id="letra_m_dma"> </p>
+            <p id="letra_a_dma"> </p>
         </div>
 
         <div class="RAM">
@@ -140,7 +140,7 @@
         <p id="tx_pergunta"> <span class="destaque" id="span_pergunta">1</span>- Qual o componente principal de um
             computador?</p>
         <input type="text" placeholder="Digite sua resposta" id="in_resposta">
-        <button class="btn_style_input" onclick="verificacao_pergunta()">Confirmar</button>
+        <button class="btn_style_input" id="btn_confirmacao" onclick="verificacao_pergunta()">Confirmar</button>
 
     </div>
 
@@ -159,7 +159,7 @@
                                          acionamento da questão 1, porém se estivermos na questão 2 e clicarmos no botão, 
                                          desejamos que seja selecionada a função da questão atual, e não somente a primeira, 
                                          logo, esse if verifica qual questão estamos*/
-            if (resposta == 'CPU' || resposta == 'cpu' || resposta== 'Cpu') {
+            if (resposta == 'CPU' || resposta == 'cpu' || resposta == 'Cpu') {
                 /* Se o usuario acertar a questão, setar as letras na cruzadinha, 
                                                                        realizar a estilização e chamar a proxima pergunta*/
                 letra_c_cpu.innerHTML = `C¹`;
@@ -200,7 +200,7 @@
                                                                alguma resposta na pergunta, evitando o bug de acionamento de função 
                                                                sem a necessidade*/
 
-                if ((resposta == 'CS') || (resposta == 'cs') || (resposta=='Cs')) {
+                if ((resposta == 'CS') || (resposta == 'cs') || (resposta == 'Cs')) {
                     letra_c_cpu.innerHTML = `C¹`;
                     letra_s_cs.innerHTML = `S`;
 
@@ -278,7 +278,7 @@
                                                                alguma resposta na pergunta, evitando o bug de acionamento de função 
                                                                sem a necessidade*/
 
-                if (resposta == 'Adress Buss' || resposta == 'adress buss' || resposta == 'Adress buss') {
+                if (resposta == 'Adress Bus' || resposta == 'adress bus' || resposta == 'Adress bus') {
 
                     letra_a2_db.innerHTML = `A⁴`;
                     letra_d_ab.innerHTML = `D`;
@@ -290,7 +290,7 @@
                     letra_b_ab.innerHTML = `B`;
                     letra_u_ab.innerHTML = `U`;
                     letra_s3_ab.innerHTML = `S`;
-                    letra_s4_ab.innerHTML = `S`;
+
 
                     letra_a2_db.style = estiloPalavra;
                     letra_d_ab.style = estiloPalavra;
@@ -302,7 +302,7 @@
                     letra_b_ab.style = estiloPalavra;
                     letra_u_ab.style = estiloPalavra;
                     letra_s3_ab.style = estiloPalavra;
-                    letra_s4_ab.style = estiloPalavra;
+                    letra_s4_ab.style = 'color: white; border: white solid 4px';
 
 
 
@@ -386,10 +386,10 @@
 
                     letra_e_regist.innerHTML = `E`;
                     letra_g_regist.innerHTML = `G`;
-                    letra_i_regist.innerHTML = `I`;
+                    letra_i_regist.innerHTML = `I¹⁰`;
                     letra_s_regist.innerHTML = `S`;
                     letra_t_regist.innerHTML = `T`;
-                    letra_r_regist.innerHTML = `R`;
+                    letra_r_regist.innerHTML = `R¹²`;
                     letra_a_regist.innerHTML = `A`;
                     letra_d_regist.innerHTML = `D`;
                     letra_o_regist.innerHTML = `O`;
@@ -397,7 +397,7 @@
                     letra_e2_regist.innerHTML = `E`;
                     letra_s2_regist.innerHTML = `S`;
 
-              
+
                     letra_e_regist.style = estiloPalavra;
                     letra_g_regist.style = estiloPalavra;
                     letra_i_regist.style = estiloPalavra;
@@ -407,9 +407,9 @@
                     letra_a_regist.style = estiloPalavra;
                     letra_d_regist.style = estiloPalavra;
                     letra_o_regist.style = estiloPalavra;
-                    
-                    
-                    
+
+
+
 
 
                     tx_pergunta.innerHTML =
@@ -443,7 +443,6 @@
                     letra_r_eprom.innerHTML = `R`;
                     letra_o_eprom.innerHTML = `O`;
                     letra_m_eprom.innerHTML = `M`;
-                   
 
                     letra_p_eprom.style = estiloPalavra;
                     letra_r_eprom.style = estiloPalavra;
@@ -452,7 +451,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">8</span>- Como acessar a memória sem nenhuma conexão ou intervenção da CPU? `
+                        `<span class="destaque" id="span_pergunta">8</span>- Qual a sigla para acessar a memória sem nenhuma conexão ou intervenção da CPU? `
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_7();
 
@@ -462,6 +461,222 @@
             }
         } else if (pergunta != 7) {
             verificacao_pergunta_8();
+        }
+    }
+
+    function verificacao_pergunta_8() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 8) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if (resposta == 'DMA' || resposta == 'Dma' || resposta == 'dma') {
+
+                    letra_d_db.innerHTML = `D⁸ ⁹`;
+                    letra_m_dma.innerHTML = `M`;
+                    letra_a_dma.innerHTML = `A`;
+
+
+                    letra_d_db.style = estiloPalavra;
+                    letra_m_dma.style = estiloPalavra;
+                    letra_a_dma.style = estiloPalavra;
+
+
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">9</span>- Como realizar transferências por toda placa mãe com um processo parecido com do adress bus?  `
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_8();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 8) {
+            verificacao_pergunta_9();
+        }
+    }
+
+    function verificacao_pergunta_9() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 9) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if (resposta == 'Data bus' || resposta == 'Data Bus' || resposta == 'data bus') {
+
+                    letra_a_db.innerHTML = `A`;
+                    letra_t_db.innerHTML = `T`;
+                    letra___db.innerHTML = `_`;
+                    letra_b_db.innerHTML = `B`;
+                    letra_u_db.innerHTML = `U`;
+                    letra_s_db.innerHTML = `S`;
+
+                    letra_a_db.style = estiloPalavra;
+                    letra_t_db.style = estiloPalavra;
+                    letra___db.style = estiloPalavra;
+                    letra_b_db.style = estiloPalavra;
+                    letra_u_db.style = estiloPalavra;
+                    letra_s_db.style = estiloPalavra;
+
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">10</span>- Qual o nome do processador que entrou em comercialização em 17 de novembro de 2008 com 2.9 GHz?  `
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_10();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 9) {
+            verificacao_pergunta_10();
+        }
+    }
+
+    function verificacao_pergunta_10() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 10) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if (resposta == 'i7' || resposta == 'I7') {
+
+                    letra_7_i7.innerHTML = `7`;
+
+                    letra_7_i7.style = estiloPalavra;
+
+
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">11</span>-Qual tipo de memória é responsavel por guardar informações temporarias de programas abertos?`
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_11();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 10) {
+            verificacao_pergunta_11();
+        }
+    }
+
+    function verificacao_pergunta_11() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 11) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if (resposta == 'RAM' || resposta == 'Ram' || resposta == 'ram') {
+
+
+                    letra_a_ram.innerHTML = `A`;
+                    letra_m_ram.innerHTML = `M`;
+
+                    letra_a_ram.style = estiloPalavra;
+                    letra_m_ram.style = estiloPalavra;
+
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">12</span>-Qual tipo de memória que já vem com informações implantadas?`
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_11();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 11) {
+            verificacao_pergunta_12();
+        }
+    }
+
+    function verificacao_pergunta_12() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 12) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade (bug acontecendo após acertar a função anterior)*/
+
+                if (resposta == 'ROM' || resposta == 'Rom' || resposta == 'rom') {
+
+
+                    letra_o_rom.innerHTML = `O`;
+                    letra_m_rom.innerHTML = `M`;
+
+
+
+                    letra_o_rom.style = estiloPalavra;
+                    letra_m_rom.style = estiloPalavra;
+
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">13</span>-Qual parte dos componentes de uma CPU é responsavel pela parte logica de processamento?`
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_12();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 12) {
+            verificacao_pergunta_13();
+        }
+    }
+
+    function verificacao_pergunta_13() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 13) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade (bug acontecendo após acertar a função anterior)*/
+
+                if (resposta == 'ULA' || resposta == 'ula' || resposta == 'Ula') {
+
+
+                    letra_l_ula.innerHTML = `L`;
+                    
+                    letra_l_ula.style = estiloPalavra;
+                
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span>`
+                    document.getElementById("in_resposta").value = "";
+                    in_resposta.style.display='none';
+                    btn_confirmacao.style.display='none';
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
         }
     }
 </script>
