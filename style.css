@@ -123,9 +123,9 @@ body{
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #39006f; */
 
-    color: white;
+    color: #f10160;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: #39006f;;
 }
 
 .dual_core{

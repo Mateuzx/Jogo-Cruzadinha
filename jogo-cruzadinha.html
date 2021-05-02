@@ -50,7 +50,7 @@
             <p id="letra_e_ab"> </p>
             <p id="letra_s_ab"> </p>
             <p id="letra_s2_ab"> </p>
-            <p>_</p>
+            <p id="letra___ab">_</p>
             <p id="letra_b_ab"> </p>
             <p id="letra_u_ab"> </p>
             <p id="letra_s3_ab"> </p>
@@ -92,7 +92,7 @@
             <p id="letra_u_quadcore"> </p>
             <p id="letra_a_quadcore"> </p>
             <p class="letra_d_quad" id="letra_d_quadcore">D</p>
-            <p>_</p>
+            <p id="letra___quadcore">_</p>
             <p id="letra_c_quadcore"> </p>
             <p id="letra_o_quadcore"> </p>
             <p id="letra_r_quadcore"> </p>
@@ -149,8 +149,6 @@
 </html>
 
 <script>
-    
-
     function verificacao_pergunta() {
         var resposta = in_resposta.value;
         var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
@@ -161,14 +159,15 @@
                                          acionamento da questão 1, porém se estivermos na questão 2 e clicarmos no botão, 
                                          desejamos que seja selecionada a função da questão atual, e não somente a primeira, 
                                          logo, esse if verifica qual questão estamos*/
-            if (resposta == 'CPU' || resposta == 'cpu') {
+            if (resposta == 'CPU' || resposta == 'cpu' || resposta== 'Cpu') {
                 /* Se o usuario acertar a questão, setar as letras na cruzadinha, 
                                                                        realizar a estilização e chamar a proxima pergunta*/
                 letra_c_cpu.innerHTML = `C¹`;
                 letra_p_cpu.innerHTML = `P`;
                 letra_u_cpu.innerHTML = `U¹³`;
 
-                letra_p_cpu.style = estiloPalavra; // Setagem de cores, para a ativação das palavras (no css ta tudo white)
+                letra_p_cpu.style =
+                    estiloPalavra; // Setagem de cores, para a ativação das palavras (no css ta tudo white)
 
                 tx_pergunta.innerHTML =
                     `<span class="destaque" id="span_pergunta">2</span>- Como é chamado uma linha de controle para circuitos?`
@@ -193,7 +192,7 @@
     function verificacao_pergunta_2() {
         var resposta = in_resposta.value;
         var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
-        var pergunta = span_pergunta.innerHTML; 
+        var pergunta = span_pergunta.innerHTML;
 
         if (pergunta == 2) {
             if (resposta != "" || resposta != "") {
@@ -201,7 +200,7 @@
                                                                alguma resposta na pergunta, evitando o bug de acionamento de função 
                                                                sem a necessidade*/
 
-                if ((resposta == 'CS') || (resposta == 'cs')) {
+                if ((resposta == 'CS') || (resposta == 'cs') || (resposta=='Cs')) {
                     letra_c_cpu.innerHTML = `C¹`;
                     letra_s_cs.innerHTML = `S`;
 
@@ -244,7 +243,7 @@
                     letra_r_dualcore.innerHTML = `R`;
                     letra_e_dualcore.innerHTML = `E`;
 
-                    letra_d_dualcore.style = estiloPalavra; 
+                    letra_d_dualcore.style = estiloPalavra;
                     letra_u_ab.style = estiloPalavra;
                     letra_a_dualcore.style = estiloPalavra;
                     letra_l_dualcore.style = estiloPalavra;
@@ -262,12 +261,207 @@
                 } else {
                     alert('Resposta incorreta');
                 }
-
-
-
             }
         } else if (pergunta != 3) {
             verificacao_pergunta_4();
+        }
+    }
+
+    function verificacao_pergunta_4() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 4) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if (resposta == 'Adress Buss' || resposta == 'adress buss' || resposta == 'Adress buss') {
+
+                    letra_a2_db.innerHTML = `A⁴`;
+                    letra_d_ab.innerHTML = `D`;
+                    letra_r_ab.innerHTML = `R⁶`;
+                    letra_e_ab.innerHTML = `E`;
+                    letra_s_ab.innerHTML = `S`;
+                    letra_s2_ab.innerHTML = `S`;
+                    letra___ab.innerHTML = `_`;
+                    letra_b_ab.innerHTML = `B`;
+                    letra_u_ab.innerHTML = `U`;
+                    letra_s3_ab.innerHTML = `S`;
+                    letra_s4_ab.innerHTML = `S`;
+
+                    letra_a2_db.style = estiloPalavra;
+                    letra_d_ab.style = estiloPalavra;
+                    letra_r_ab.style = estiloPalavra;
+                    letra_e_ab.style = estiloPalavra;
+                    letra_s_ab.style = estiloPalavra;
+                    letra_s2_ab.style = estiloPalavra;
+                    letra___ab.style = estiloPalavra;
+                    letra_b_ab.style = estiloPalavra;
+                    letra_u_ab.style = estiloPalavra;
+                    letra_s3_ab.style = estiloPalavra;
+                    letra_s4_ab.style = estiloPalavra;
+
+
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">5</span>- Qual o nome dado a um processados com 4 núcleos? `
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_5();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 4) {
+            verificacao_pergunta_5();
+        }
+
+    }
+
+
+    function verificacao_pergunta_5() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 5) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if (resposta == 'quad core' || resposta == 'Quad Core' || resposta == 'Quad core') {
+
+                    letra_q_quadcore.innerHTML = `Q⁵`;
+                    letra_u_quadcore.innerHTML = `U`;
+                    letra_a_quadcore.innerHTML = `A`;
+                    letra_d_regist.innerHTML = `D`;
+                    letra___quadcore.innerHTML = `_`;
+                    letra_c_quadcore.innerHTML = `C`;
+                    letra_o_quadcore.innerHTML = `O`;
+                    letra_r_quadcore.innerHTML = `R`;
+                    letra_e_quadcore.innerHTML = `E⁷`;
+
+
+                    letra_q_quadcore.style = estiloPalavra;
+                    letra_u_quadcore.style = estiloPalavra;
+                    letra_a_quadcore.style = estiloPalavra;
+                    letra_d_regist.style = estiloPalavra;
+                    letra___quadcore.style = estiloPalavra;
+                    letra_c_quadcore.style = estiloPalavra;
+                    letra_o_quadcore.style = estiloPalavra;
+                    letra_r_quadcore.style = estiloPalavra;
+                    letra_e_quadcore.style = estiloPalavra;
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">6</span>- Qual a parte fixa de um processador que armazena para realizar operações? `
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_6();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 5) {
+            verificacao_pergunta_6();
+        }
+    }
+
+    function verificacao_pergunta_6() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 6) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if (resposta == 'Registrador' || resposta == 'registrador' || resposta == 'registradores' ||
+                    resposta == 'Registradores') {
+
+                    letra_e_regist.innerHTML = `E`;
+                    letra_g_regist.innerHTML = `G`;
+                    letra_i_regist.innerHTML = `I`;
+                    letra_s_regist.innerHTML = `S`;
+                    letra_t_regist.innerHTML = `T`;
+                    letra_r_regist.innerHTML = `R`;
+                    letra_a_regist.innerHTML = `A`;
+                    letra_d_regist.innerHTML = `D`;
+                    letra_o_regist.innerHTML = `O`;
+                    letra_r2_regist.innerHTML = `R¹¹`;
+                    letra_e2_regist.innerHTML = `E`;
+                    letra_s2_regist.innerHTML = `S`;
+
+              
+                    letra_e_regist.style = estiloPalavra;
+                    letra_g_regist.style = estiloPalavra;
+                    letra_i_regist.style = estiloPalavra;
+                    letra_s_regist.style = estiloPalavra;
+                    letra_t_regist.style = estiloPalavra;
+                    letra_r_regist.style = estiloPalavra;
+                    letra_a_regist.style = estiloPalavra;
+                    letra_d_regist.style = estiloPalavra;
+                    letra_o_regist.style = estiloPalavra;
+                    
+                    
+                    
+
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">7</span>- Qual o tipo de memória do tipo ROM que permite modificações? `
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_7();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 6) {
+            verificacao_pergunta_7();
+        }
+    }
+
+    function verificacao_pergunta_7() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 7) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade*/
+
+                if (resposta == 'EPROM' || resposta == 'Eprom' || resposta == 'eprom') {
+
+                    letra_p_eprom.innerHTML = `P`;
+                    letra_r_eprom.innerHTML = `R`;
+                    letra_o_eprom.innerHTML = `O`;
+                    letra_m_eprom.innerHTML = `M`;
+                   
+
+                    letra_p_eprom.style = estiloPalavra;
+                    letra_r_eprom.style = estiloPalavra;
+                    letra_o_eprom.style = estiloPalavra;
+                    letra_m_eprom.style = estiloPalavra;
+
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">8</span>- Como acessar a memória sem nenhuma conexão ou intervenção da CPU? `
+                    document.getElementById("in_resposta").value = "";
+                    verificacao_pergunta_7();
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 7) {
+            verificacao_pergunta_8();
         }
     }
 </script>
