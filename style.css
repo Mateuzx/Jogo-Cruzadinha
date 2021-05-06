@@ -178,16 +178,17 @@ body{
 }
 
 .CS{
-    margin-left: 1.7%;
-    margin-top: -27.7%;
+    margin-left: 1.4%;
+    margin-top: -6.3%;
     position: absolute;
+    
     
     
 }
 
 .CS p{
     border: #39006f 4px solid;
-    
+    float: left;
     width: 50px;
     font-size: 30px;
     text-align: center;
@@ -206,6 +207,26 @@ body{
 }
 
 .i7 p{
+    border: #39006f 4px solid;
+    
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+.i5{
+    margin-left: 10.001%;
+    margin-top: -3.5%;
+    position: absolute;
+    
+}
+
+.i5 p{
     border: #39006f 4px solid;
     
     width: 50px;
@@ -244,6 +265,28 @@ body{
     position: absolute;
     
 }
+
+.flash{
+    margin-left: 5.6%;
+    margin-top: -12.4%;
+    position: absolute;
+    
+}
+
+.flash p{
+    border: #39006f 4px solid;
+    float: left;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+
 
 .ROM p{
     border: #39006f 4px solid;

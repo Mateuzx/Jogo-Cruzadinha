@@ -100,7 +100,18 @@
         </div>
 
         <div class="CS">
+            <p id="letra_c_cs" style="color: #f10160; -webkit-text-stroke-color: #39006f;">2</p>
+            <p id="letra_h_cs"> </p>
+            <p id="letra_i_cs" style="color: #f10160; -webkit-text-stroke-color: #39006f;">14</p>
+            <p id="letra_p_cs"> </p>
+            <p id="letra___cs"> </p>
             <p id="letra_s_cs"> </p>
+            <p id="letra_e_cs"> </p>
+            <p id="letra_l_cs"> </p>
+            <p id="letra_e2_cs"> </p>
+            <p id="letra_c2_cs"> </p>
+            <p id="letra_t_cs"> </p>
+
         </div>
 
         <div class="i7">
@@ -127,6 +138,18 @@
             <p id="letra_r_eprom"> </p>
             <p id="letra_o_eprom"> </p>
             <p id="letra_m_eprom"> </p>
+        </div>
+
+        <div class="i5">
+            <p id="letra_5_i5"></p>
+        </div>
+
+        <div class="flash">
+            <p id="letra_f_flash" style="color: #f10160; -webkit-text-stroke-color: #39006f;">15</p>
+            <p id="letra_l_flash"></p>
+            <p id="letra_a_flash"></p>
+            <p id="letra_s_flash"></p>
+            <p id="letra_h_flash"></p>
         </div>
 
     </div>
@@ -194,17 +217,50 @@
         var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
         var pergunta = span_pergunta.innerHTML;
 
+
+        /* <p id="letra_h_cs"> </p>
+            <p id="letra_i_cs"> </p>
+            <p id="letra_p_cs"> </p>
+            <p id="letra___cs"> </p>
+            <p id="letra_s_cs"> </p>
+            <p id="letra_e_cs"> </p>
+            <p id="letra_l_cs"> </p>
+            <p id="letra_e2_cs"> </p>
+            <p id="letra_c_cs"> </p>
+            <p id="letra_t_cs"> </p> */
+
+
         if (pergunta == 2) {
             if (resposta != "" || resposta != "") {
                 /*Parametro para garantir a execução somente caso o usuario escreva 
                                                                alguma resposta na pergunta, evitando o bug de acionamento de função 
                                                                sem a necessidade*/
 
-                if ((resposta == 'CS') || (resposta == 'cs') || (resposta == 'Cs')) {
-                    letra_c_cpu.innerHTML = `C¹`;
+                if ((resposta == 'Chip Select') || (resposta == 'chip select') || (resposta == 'Cs')) {
+                    letra_c_cs.innerHTML = `C²`;
+                    letra_h_cs.innerHTML = `H`;
+                    letra_i_cs.innerHTML = `I¹⁴`;
+                    letra_p_cs.innerHTML = `P`;
+                    letra___cs.innerHTML = `_`;
                     letra_s_cs.innerHTML = `S`;
+                    letra_e_cs.innerHTML = `E`;
+                    letra_l_cs.innerHTML = `L`;
+                    letra_e2_cs.innerHTML = `E`;
+                    letra_c2_cs.innerHTML = `C`;
+                    letra_t_cs.innerHTML = `T`;
 
+                    letra_c_cs.style = estiloPalavra;
+                    letra_h_cs.style = estiloPalavra;
+                    letra_i_cs.style = estiloPalavra;
+                    letra_p_cs.style = estiloPalavra;
+                    letra___cs.style = estiloPalavra;
                     letra_s_cs.style = estiloPalavra;
+                    letra_e_cs.style = estiloPalavra;
+                    letra_l_cs.style = estiloPalavra;
+                    letra_e2_cs.style = estiloPalavra;
+                    letra_c2_cs.style = estiloPalavra;
+                    letra_t_cs.style = estiloPalavra;
+
 
                     tx_pergunta.innerHTML =
                         `<span class="destaque" id="span_pergunta">3</span>- Qual o nome dado a um processados com 2 núcleos?`
@@ -381,8 +437,7 @@
                                                                alguma resposta na pergunta, evitando o bug de acionamento de função 
                                                                sem a necessidade*/
 
-                if (resposta == 'Registrador' || resposta == 'registrador' || resposta == 'registradores' ||
-                    resposta == 'Registradores') {
+                if (resposta == 'registradores' || resposta == 'Registradores') {
 
                     letra_e_regist.innerHTML = `E`;
                     letra_g_regist.innerHTML = `G`;
@@ -638,7 +693,7 @@
                     tx_pergunta.innerHTML =
                         `<span class="destaque" id="span_pergunta">13</span>-Qual parte dos componentes de uma CPU é responsavel pela parte logica de processamento?`
                     document.getElementById("in_resposta").value = "";
-                    verificacao_pergunta_12();
+                    verificacao_pergunta_13();
 
                 } else {
                     alert('Resposta incorreta');
@@ -648,6 +703,8 @@
             verificacao_pergunta_13();
         }
     }
+
+
 
     function verificacao_pergunta_13() {
         var resposta = in_resposta.value;
@@ -664,19 +721,113 @@
 
 
                     letra_l_ula.innerHTML = `L`;
-                    
+
                     letra_l_ula.style = estiloPalavra;
-                
-                    tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span>`
+
+                    tx_pergunta.innerHTML = tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">14</span>-Qual o nome do processador que entrou em comercialização em 9 de setembro de 2009 com 2.66 GHz?</span><br>`
+                    /* `<span class="destaque" id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span><br>
+                    <a href="index.html"><button class="btn_style_input"">Novo Jogo</button></a>` */
                     document.getElementById("in_resposta").value = "";
-                    in_resposta.style.display='none';
-                    btn_confirmacao.style.display='none';
+                    /* in_resposta.style.display = 'none';
+                    btn_confirmacao.style.display = 'none'; */
+                    verificacao_pergunta_14();
+
 
                 } else {
                     alert('Resposta incorreta');
                 }
             }
+        } else if (pergunta != 13) {
+            verificacao_pergunta_14();
         }
+    }
+
+    function verificacao_pergunta_14() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 14) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade (bug acontecendo após acertar a função anterior)*/
+
+                if (resposta == 'I5' || resposta == 'i5') {
+
+                    
+                    letra_5_i5.innerHTML = `5`;
+
+                    letra_5_i5.style = estiloPalavra;
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" id="span_pergunta">15</span>-Qual o tipo de memória volátil que se mantem informações mesmo sem energia? </span><br>`
+                    /* `<span class="destaque" id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span><br>
+                    <a href="index.html"><button class="btn_style_input"">Novo Jogo</button></a>` */
+                    document.getElementById("in_resposta").value = "";
+                    /*  in_resposta.style.display = 'none';
+                     btn_confirmacao.style.display = 'none'; */
+                     verificacao_pergunta_15();
+
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            } 
+        } else if (pergunta != 14) {
+            verificacao_pergunta_15();
+        }
+    }
+
+    function verificacao_pergunta_15() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 15) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade (bug acontecendo após acertar a função anterior)*/
+
+
+            /* <div class="flash">
+            <p id="letra_f_flash" style="color: #f10160; -webkit-text-stroke-color: #39006f;">15</p>
+            <p id="letra_l_flash"></p>
+            <p id="letra_a_flash"></p>
+            <p id="letra_s_flash"></p>
+            <p id="letra_h_flash"></p>
+            </div> */
+
+                if (resposta == 'Flash' || resposta == 'flash') {
+
+                    
+                    letra_f_flash.innerHTML = `F¹⁵`;
+                    letra_l_flash.innerHTML = `L`;
+                    letra_a_flash.innerHTML = `A`;
+                    
+                    letra_h_flash.innerHTML = `H`;
+
+                    letra_5_i5.style = estiloPalavra;
+                    letra_l_flash.style = estiloPalavra;
+                    letra_a_flash.style = estiloPalavra;
+                    letra_h_flash.style = estiloPalavra;
+
+                    tx_pergunta.innerHTML =
+                        
+                    `<span class="destaque" id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span><br>
+                    <a href="index.html"><button class="btn_style_input"">Novo Jogo</button></a>`
+                    document.getElementById("in_resposta").value = "";
+                     in_resposta.style.display = 'none';
+                     btn_confirmacao.style.display = 'none';
+                     verificacao_pergunta_15();
+
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            } 
+        } 
     }
 </script>
