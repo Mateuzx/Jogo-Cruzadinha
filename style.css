@@ -22,8 +22,9 @@ body{
 /*Criação das linhas da cruzadinha*/
 
 .CPU{
-    margin-left: 2%;
-    margin-top: 2%;
+    margin-left: 25px;
+    margin-top: 14px;
+    position: absolute;
 }
 
 .CPU p{
@@ -41,8 +42,9 @@ body{
 }
 
 .ULA{
-    margin-left: 12.5%;
-    margin-top: 5.80%;
+    margin-left: 141.1px;
+    margin-top: 51.8px;
+    position: absolute;
 }
 
 .ULA p{
@@ -64,8 +66,10 @@ body{
 }
 
 .data_bus{
-    margin-left: 7.7%;
-    margin-top: -3.8%;
+    margin-left: 87.7px;
+    margin-top: 89.2px;
+    position: absolute;
+
 }
 
 .data_bus p{
@@ -88,8 +92,9 @@ body{
 }
 
 .adress_buss{
-    margin-left: 22.8%;
-    margin-top: 3.4%;
+    margin-left: 254.8px;
+    margin-top: 128.4px;
+    position: absolute;
     
 }
 
@@ -106,8 +111,9 @@ body{
 }
 
 .Registradores{
-    margin-left: 28.0%;
-    margin-top: -34.46%;
+    margin-left: 308px;
+    margin-top: 169.54px;
+    position: absolute;
     
 }
 
@@ -129,8 +135,9 @@ body{
 }
 
 .dual_core{
-    margin-left: 17.9%;
-    margin-top: 23.0%;
+    margin-left: 200.9px;
+    margin-top: 422px;
+    position: absolute;
 }
 
 .dual_core p{
@@ -153,8 +160,8 @@ body{
 }
 
 .quad_core{
-    margin-left: 53.0%;
-    margin-top: -27.8%;
+    margin-left: 714.2px;
+    margin-top: 48.2px;
     position: absolute;
     
 }
@@ -178,8 +185,8 @@ body{
 }
 
 .CS{
-    margin-left: 1.4%;
-    margin-top: -6.3%;
+    margin-left: 23.4px;
+    margin-top: 339.7px;
     position: absolute;
     
     
@@ -200,8 +207,8 @@ body{
 }
 
 .i7{
-    margin-left: 31.5%;
-    margin-top: -16.0%;
+    margin-left: 425.5px;
+    margin-top: 208px;
     position: absolute;
     
 }
@@ -220,8 +227,8 @@ body{
 }
 
 .i5{
-    margin-left: 10.001%;
-    margin-top: -3.5%;
+    margin-left: 139.001px;
+    margin-top: 378.5px;
     position: absolute;
     
 }
@@ -240,10 +247,9 @@ body{
 }
 
 .RAM{
-    margin-left: 61.5%;
-    margin-top: -16%;
+    margin-left: 830.5px;
+    margin-top: 208px;
     position: absolute;
-    
 }
 
 .RAM p{
@@ -260,15 +266,15 @@ body{
 }
 
 .ROM{
-    margin-left: 44.3%;
-    margin-top: -16%;
+    margin-left: 598.3px;
+    margin-top: 209px;
     position: absolute;
     
 }
 
 .flash{
-    margin-left: 5.6%;
-    margin-top: -12.4%;
+    margin-left: 80.6px;
+    margin-top: 254.6px;
     position: absolute;
     
 }
@@ -324,7 +330,7 @@ body{
 
 .Eprom{
     margin-left: 56.9%;
-    margin-top: -3.5%;
+    margin-top: 27.9%;
     position: absolute;
 }
 
