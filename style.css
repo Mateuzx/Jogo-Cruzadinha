@@ -22,9 +22,8 @@ body{
 /*Criação das linhas da cruzadinha*/
 
 .CPU{
-    margin-left: 25px;
-    margin-top: 14px;
-    position: absolute;
+    margin-left: 2%;
+    margin-top: 2%;
 }
 
 .CPU p{
@@ -42,9 +41,8 @@ body{
 }
 
 .ULA{
-    margin-left: 141.1px;
-    margin-top: 51.8px;
-    position: absolute;
+    margin-left: 12.5%;
+    margin-top: 5.80%;
 }
 
 .ULA p{
@@ -66,10 +64,8 @@ body{
 }
 
 .data_bus{
-    margin-left: 87.7px;
-    margin-top: 90.2px;
-    position: absolute;
-
+    margin-left: 7.7%;
+    margin-top: -3.8%;
 }
 
 .data_bus p{
@@ -92,9 +88,8 @@ body{
 }
 
 .adress_buss{
-    margin-left: 254.8px;
-    margin-top: 128.4px;
-    position: absolute;
+    margin-left: 22.8%;
+    margin-top: 3.4%;
     
 }
 
@@ -111,9 +106,8 @@ body{
 }
 
 .Registradores{
-    margin-left: 308px;
-    margin-top: 169.54px;
-    position: absolute;
+    margin-left: 28.0%;
+    margin-top: -34.46%;
     
 }
 
@@ -135,8 +129,8 @@ body{
 }
 
 .dual_core{
-    margin-left: 17.9px;
-    margin-top: 23.0px;
+    margin-left: 17.9%;
+    margin-top: 23.0%;
 }
 
 .dual_core p{
@@ -159,8 +153,8 @@ body{
 }
 
 .quad_core{
-    margin-left: 53.0px;
-    margin-top: -27.8px;
+    margin-left: 53.0%;
+    margin-top: -27.8%;
     position: absolute;
     
 }
@@ -184,8 +178,8 @@ body{
 }
 
 .CS{
-    margin-left: 1.4px;
-    margin-top: -6.3px;
+    margin-left: 1.4%;
+    margin-top: -6.3%;
     position: absolute;
     
     
@@ -206,8 +200,8 @@ body{
 }
 
 .i7{
-    margin-left: 31.5px;
-    margin-top: -16.0px;
+    margin-left: 31.5%;
+    margin-top: -16.0%;
     position: absolute;
     
 }
@@ -226,7 +220,7 @@ body{
 }
 
 .i5{
-    margin-left: 10.001px;
+    margin-left: 10.001%;
     margin-top: -3.5%;
     position: absolute;
     
