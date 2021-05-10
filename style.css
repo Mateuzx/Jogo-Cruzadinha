@@ -153,10 +153,29 @@ body{
     -webkit-text-stroke-color: white;
 }
 
+
 .dual_core .letra_u_dualCore{
     color: white;
     -webkit-text-stroke-color: white;
     border: none;
+}
+
+.memoria_massa{
+    margin-left: 946.9px;
+    margin-top: 85px;
+    position: absolute;
+}
+
+.memoria_massa p{
+    border: #39006f 4px solid;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    height: 34px;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
 }
 
 .quad_core{

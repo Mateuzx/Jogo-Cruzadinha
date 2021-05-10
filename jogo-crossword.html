@@ -87,6 +87,16 @@
             <p id="letra_e_dualcore"> </p>
         </div>
 
+        <div class="memoria_massa">
+            <p id="letra_m_massa" style="color: #f10160; -webkit-text-stroke-color: #39006f;">15</p>
+            <p id="letra_a_massa">a</p>
+            <p id="letra_s_massa"> </p>
+            <p id="letra_s2_massa"> </p>
+            <p id="letra_a2_massa"> </p>
+        </div>
+
+
+
         <div class="quad_core">
             <p id="letra_q_quadcore" style="color: #f10160; -webkit-text-stroke-color: #39006f;">5</p>
             <p id="letra_u_quadcore"> </p>
@@ -145,7 +155,7 @@
         </div>
 
         <div class="flash">
-            <p id="letra_f_flash" style="color: #f10160; -webkit-text-stroke-color: #39006f;">15</p>
+            <p id="letra_f_flash" style="color: #f10160; -webkit-text-stroke-color: #39006f;">16</p>
             <p id="letra_l_flash"></p>
             <p id="letra_a_flash"></p>
             <p id="letra_s_flash"></p>
@@ -160,9 +170,9 @@
     </div>
 
     <div class="div_perguntas">
-        <p id="tx_pergunta"> <span class="destaque" id="span_pergunta">1</span>- Qual o componente principal de um
+        <p id="tx_pergunta" > <span class="destaque" id="span_pergunta">1</span>- Qual o componente principal de um
             computador?</p>
-        <input type="text" placeholder="Digite sua resposta" id="in_resposta">
+        <input type="text" autofocus placeholder="Digite sua resposta" id="in_resposta">
         <button class="btn_style_input" id="btn_confirmacao" onclick="verificacao_pergunta()">Confirmar</button>
 
     </div>
@@ -193,7 +203,7 @@
                     estiloPalavra; // Setagem de cores, para a ativação das palavras (no css ta tudo white)
 
                 tx_pergunta.innerHTML =
-                    `<span class="destaque" id="span_pergunta">2</span>- Como é chamado uma linha de controle para circuitos?`
+                    `<span class="destaque" autofocus id="span_pergunta">2</span>- Como é chamado uma linha de controle para circuitos?`
                 document.getElementById("in_resposta").value = "";
                 /*Linha para apagar a resposta da primeira questão, 
                                                                                para deixar o input para a proxima pergunta*/
@@ -263,7 +273,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">3</span>- Qual o nome dado a um processados com 2 núcleos?`
+                        `<span class="destaque" autofocus id="span_pergunta">3</span>- Qual o nome dado a um processados com 2 núcleos?`
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_3();
 
@@ -310,7 +320,7 @@
                     letra_e_dualcore.style = estiloPalavra;
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">4</span>- Qual configuração para transferir dados entre dispositivos via hardware? `
+                        `<span class="destaque" autofocus id="span_pergunta">4</span>- Qual configuração para transferir dados entre dispositivos via hardware? `
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_4();
 
@@ -363,7 +373,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">5</span>- Qual o nome dado a um processados com 4 núcleos? `
+                        `<span class="destaque" autofocus id="span_pergunta">5</span>- Qual o nome dado a um processados com 4 núcleos? `
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_5();
 
@@ -413,7 +423,7 @@
                     letra_e_quadcore.style = estiloPalavra;
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">6</span>- Qual a parte fixa de um processador que armazena para realizar operações? `
+                        `<span class="destaque" autofocus id="span_pergunta">6</span>- Qual a parte fixa de um processador que armazena para realizar operações? `
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_6();
 
@@ -468,7 +478,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">7</span>- Qual o tipo de memória do tipo ROM que permite modificações? `
+                        `<span class="destaque" autofocus id="span_pergunta">7</span>- Qual o tipo de memória do tipo ROM que permite modificações? `
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_7();
 
@@ -506,7 +516,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">8</span>- Qual a sigla para acessar a memória sem nenhuma conexão ou intervenção da CPU? `
+                        `<span class="destaque" autofocus id="span_pergunta">8</span>- Qual a sigla para acessar a memória sem nenhuma conexão ou intervenção da CPU? `
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_7();
 
@@ -544,7 +554,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">9</span>- Como realizar transferências por toda placa mãe com um processo parecido com do adress bus?  `
+                        `<span class="destaque" autofocus id="span_pergunta">9</span>- Como realizar transferências por toda placa mãe com um processo parecido com do adress bus?  `
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_8();
 
@@ -586,7 +596,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">10</span>- Qual o nome do processador que entrou em comercialização em 17 de novembro de 2008 com 2.9 GHz?  `
+                        `<span class="destaque" autofocus id="span_pergunta">10</span>- Qual o nome do processador que entrou em comercialização em 17 de novembro de 2008 com 2.9 GHz?  `
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_10();
 
@@ -619,7 +629,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">11</span>-Qual tipo de memória é responsavel por guardar informações temporarias de programas abertos?`
+                        `<span class="destaque" autofocus id="span_pergunta">11</span>-Qual tipo de memória é responsavel por guardar informações temporarias de programas abertos?`
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_11();
 
@@ -654,7 +664,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">12</span>-Qual tipo de memória que já vem com informações implantadas?`
+                        `<span class="destaque" autofocus id="span_pergunta">12</span>-Qual tipo de memória que já vem com informações implantadas?`
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_11();
 
@@ -691,7 +701,7 @@
 
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">13</span>-Qual parte dos componentes de uma CPU é responsavel pela parte logica de processamento?`
+                        `<span class="destaque" autofocus id="span_pergunta">13</span>-Qual parte dos componentes de uma CPU é responsavel pela parte logica de processamento?`
                     document.getElementById("in_resposta").value = "";
                     verificacao_pergunta_13();
 
@@ -725,7 +735,7 @@
                     letra_l_ula.style = estiloPalavra;
 
                     tx_pergunta.innerHTML = tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">14</span>-Qual o nome do processador que entrou em comercialização em 9 de setembro de 2009 com 2.66 GHz?</span><br>`
+                        `<span class="destaque" autofocus id="span_pergunta">14</span>-Qual o nome do processador que entrou em comercialização em 9 de setembro de 2009 com 2.66 GHz?</span><br>`
                     /* `<span class="destaque" id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span><br>
                     <a href="index.html"><button class="btn_style_input"">Novo Jogo</button></a>` */
                     document.getElementById("in_resposta").value = "";
@@ -756,29 +766,29 @@
 
                 if (resposta == 'I5' || resposta == 'i5') {
 
-                    
+
                     letra_5_i5.innerHTML = `5`;
 
                     letra_5_i5.style = estiloPalavra;
 
                     tx_pergunta.innerHTML =
-                        `<span class="destaque" id="span_pergunta">15</span>-Qual o tipo de memória volátil que se mantem informações mesmo sem energia? </span><br>`
-                    /* `<span class="destaque" id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span><br>
-                    <a href="index.html"><button class="btn_style_input"">Novo Jogo</button></a>` */
+                        `<span class="destaque" autofocus id="span_pergunta">15</span>-Qual o tipo de memória que tem função de armazenar grandes quantidades de informações? </span><br>`
+                    
                     document.getElementById("in_resposta").value = "";
-                    /*  in_resposta.style.display = 'none';
-                     btn_confirmacao.style.display = 'none'; */
-                     verificacao_pergunta_15();
+                    
+                    verificacao_pergunta_15();
 
 
                 } else {
                     alert('Resposta incorreta');
                 }
-            } 
+            }
         } else if (pergunta != 14) {
             verificacao_pergunta_15();
         }
     }
+
+
 
     function verificacao_pergunta_15() {
         var resposta = in_resposta.value;
@@ -791,22 +801,63 @@
                                                                alguma resposta na pergunta, evitando o bug de acionamento de função 
                                                                sem a necessidade (bug acontecendo após acertar a função anterior)*/
 
+                if (resposta == 'massa' || resposta == 'Massa' || resposta == 'massa') {
 
-            /* <div class="flash">
-            <p id="letra_f_flash" style="color: #f10160; -webkit-text-stroke-color: #39006f;">15</p>
-            <p id="letra_l_flash"></p>
-            <p id="letra_a_flash"></p>
-            <p id="letra_s_flash"></p>
-            <p id="letra_h_flash"></p>
-            </div> */
+
+                    letra_m_massa.innerHTML = `M¹⁵`;
+                    letra_a_massa.innerHTML = `A`;
+                    letra_s_massa.innerHTML = `S`;
+                    letra_s2_massa.innerHTML = `S`;
+                    letra_a2_massa.innerHTML = `A`;
+
+
+                    letra_m_massa.style = estiloPalavra;
+                    letra_a_massa.style = estiloPalavra;
+                    letra_s_massa.style = estiloPalavra;
+                    letra_s2_massa.style = estiloPalavra;
+                    letra_a2_massa.style = estiloPalavra;
+
+
+                    
+
+                    tx_pergunta.innerHTML =
+                        `<span class="destaque" autofocus id="span_pergunta">16</span>--Qual o tipo de memória volátil que se mantem informações mesmo sem energia? </span><br>`
+                    
+                    document.getElementById("in_resposta").value = "";
+                    
+                    verificacao_pergunta_16();
+
+
+                } else {
+                    alert('Resposta incorreta');
+                }
+            }
+        } else if (pergunta != 15) {
+            verificacao_pergunta_16();
+        }
+    }
+
+    function verificacao_pergunta_16() {
+        var resposta = in_resposta.value;
+        var estiloPalavra = 'color: #f10160; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #39006f;';
+        var pergunta = span_pergunta.innerHTML;
+
+        if (pergunta == 16) {
+            if (resposta != "" || resposta != "") {
+                /*Parametro para garantir a execução somente caso o usuario escreva 
+                                                               alguma resposta na pergunta, evitando o bug de acionamento de função 
+                                                               sem a necessidade (bug acontecendo após acertar a função anterior)*/
+
+
+                
 
                 if (resposta == 'Flash' || resposta == 'flash') {
 
-                    
-                    letra_f_flash.innerHTML = `F¹⁵`;
+
+                    letra_f_flash.innerHTML = `F¹⁶`;
                     letra_l_flash.innerHTML = `L`;
                     letra_a_flash.innerHTML = `A`;
-                    
+
                     letra_h_flash.innerHTML = `H`;
 
                     letra_5_i5.style = estiloPalavra;
@@ -815,19 +866,19 @@
                     letra_h_flash.style = estiloPalavra;
 
                     tx_pergunta.innerHTML =
-                        
-                    `<span class="destaque" id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span><br>
+
+                        `<span class="destaque" autofocus id="span_pergunta">Você encontrou todas as palavras. PARABÉNS!!!</span><br>
                     <a href="index.html"><button class="btn_style_input"">Novo Jogo</button></a>`
                     document.getElementById("in_resposta").value = "";
-                     in_resposta.style.display = 'none';
-                     btn_confirmacao.style.display = 'none';
-                     verificacao_pergunta_15();
+                    in_resposta.style.display = 'none';
+                    btn_confirmacao.style.display = 'none';
+                    verificacao_pergunta_15();
 
 
                 } else {
                     alert('Resposta incorreta');
                 }
-            } 
-        } 
+            }
+        }
     }
 </script>
